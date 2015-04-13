@@ -1,0 +1,21 @@
+/* =Variables
+----------------------------------------------- */
+
+$main_color:#b70046; //hot pink
+$secondary_color:#0e2b5b; //dark blue
+$highlight_color1:#ff850b; //orange
+	$highlight_color1_lt:mix($highlight_color1, #fff, 60%); //light orange
+  $highlight_color1_xlt:mix($highlight_color1, #fff, 40%); //light orange
+$highlight_color2:#109679; //teal
+$reverse_color:#fff; //white
+$base_color:#404040; //grey
+
+@import "compass/css3/images";
+
+@mixin assistive-text($width:1.8em, $height:1.8em, $top:0, $left:0, $overflow:hidden) {
+	width:$width;
+	height:$height;
+	top:$top;
+	left:$left;
+	overflow:$overflow;
+}

@@ -1,0 +1,52 @@
+/* Print style sheet for joeleen.net */
+
+@media print {
+
+	#menu, .more, .social-media, .site-navigation, .post-navigation, #secondary, .entry-meta {
+		display:none;
+	}
+	.site-title {
+		font-size: 48px;
+	}
+	.section-title, .page.hentry .entry-title, .widget-title, .page-title {
+		font-size: 36px !important;
+	}
+	.blog .entry-title {
+		font-size: 30px;
+	}
+	.recent-portfolio, .recent-posts {
+		ul {
+			overflow: hidden;
+			margin: 0;
+		}
+		
+		.hentry {
+			max-width: 30%;
+			float: left;
+			clear: none;
+			border: 0 none;
+			padding: 0;
+			margin: 0 20px 0 0;
+			height: 340px;
+			page-break-inside: avoid;
+		
+			> a {
+				max-height: 260px;
+				overflow: hidden;
+			}
+		}
+	}
+	.section.about h2 {
+		margin-top: 20px;
+	}
+	.contact {
+		font-size: 16px !important;
+		li {
+			margin: 0;
+		}
+	}
+	.entry-content h2 {
+		page-break-after: avoid;
+	}
+
+}

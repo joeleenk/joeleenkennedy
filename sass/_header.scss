@@ -1,0 +1,27 @@
+/* =Header
+----------------------------------------------- */
+
+#masthead {
+	@include background(linear-gradient($highlight_color1 75%, darken($highlight_color1,3%)));
+
+	.hgroup {
+		padding-right:26%;
+	}
+	h1 {
+		margin-bottom:-2%;
+		color:$highlight_color1_xlt;
+		.hello {
+			font-size:69%;
+			display:none;
+		}
+		a {
+			text-decoration:none;
+			color:$reverse_color;
+		}
+	}
+	h4 {
+		font-size:116%;
+		display:none;
+		color:$highlight_color1_xlt;
+	}
+}

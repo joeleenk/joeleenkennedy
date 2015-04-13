@@ -1,0 +1,125 @@
+/* =Content
+----------------------------------------------- */
+
+.section-title, .page.hentry .entry-title, .widget-title, .page-title {
+	font-size:138.5%;
+	text-transform:uppercase;
+	color:$highlight_color1;
+}
+.recent-portfolio, .recent-posts, .about, .widget {
+	ul {
+		margin:0 0 4%; 
+		padding:0;
+		list-style:none;
+	}
+	.hentry {
+		h2 a {
+			padding:.3em 0 .2em;
+			display:inline-block;
+		}
+		img {
+			max-width:100%;
+			height:auto;
+			float:left;
+		}
+	}
+}
+.recent-portfolio, .recent-posts, .widget {
+	.hentry {
+		border-top:1px solid $highlight_color1_lt; 
+		margin:4% 0 0;
+		padding-top:2%;
+		&:first-child {
+			border:0 none;
+			margin-top:0;
+			padding:0;
+		}
+	}
+}
+.recent-portfolio, .recent-posts {
+	.hentry > a {
+		display:inline-block;
+		max-width:99%;
+		border:1px solid $highlight_color1_lt;
+	}
+}
+.blog, .archive, .single {
+	.hentry {
+		> .entry-content, > .entry-meta {
+			border-top:1px solid $highlight_color1_lt; 
+			padding-top:1%;
+			margin-top:1%;
+		}
+	}
+}
+
+
+/* =Connect
+----------------------------------------------- */
+#page {
+	.social-media, .contact {
+		padding:0;
+		margin-bottom:.4em;
+		list-style:none;
+	}
+	.social-media {
+		overflow:hidden;
+		padding:.1em;
+		li {
+			float:left;
+			margin-left:.6em;
+			&:first-child {
+				margin-left:0;
+			}
+		}
+		a {
+			font-size:317%;
+			line-height:1; 
+			position:relative;
+		}
+		.assistive-text {
+			@include assistive-text(1em,1.1em);
+		}
+	}
+	.contact {
+		font-size:138.5%;
+		line-height:1.8; 
+		clear:both; 
+		font-weight:600;
+		overflow:visible;
+		li {
+			margin-left:0;
+			float:none;
+		}
+		a {
+			padding:0 .5em;
+			margin-left:-.4em;
+			display:inline-block;
+			&:hover, &:focus {
+				background:$highlight_color1_lt; 
+				border-radius:3px;
+				text-decoration:none;
+			}
+			&:before {
+				margin-right:.3em;
+				vertical-align:middle;
+			}
+			&.icon-file {
+				&:before {
+					font-size:85%;
+					vertical-align:baseline;
+				}
+				.icon-more {
+					vertical-align:middle;
+					font-size:93%;
+					display:inline-block;
+				}
+			}
+		}
+	}
+}
+.gallery-size-medium dl + br + dl, .gallery-size-medium dl + br + dl + dl, .gallery-size-medium dl + br + dl + dl + dl, .gallery-size-medium dl + br + dl + dl + dl + br {
+	display:none;
+}
+
+#secondary .widget_categories .cat-item-3, #secondary .widget_categories .cat-item-12 {display:none;}

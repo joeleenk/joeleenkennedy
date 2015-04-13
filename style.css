@@ -1,0 +1,360 @@
+/*
+Theme Name:     Joeleen Kennedy
+Theme URI:      http://joeleen.net/
+Description:    Joeleen Kennedy's portfolio theme - a minimal design.
+Author:         Joeleen Kennedy
+Author URI:     http://joeleen.net/
+Version:        2.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+*/
+/*
+Resetting and rebuilding styles have been helped along thanks to the fine work of
+Eric Meyer http://meyerweb.com/eric/tools/css/reset/index.html
+along with Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
+and Blueprint http://www.blueprintcss.org/
+*/
+/* =Reset
+-------------------------------------------------------------- */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, dl, dt, dd, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td { border: 0; font-family: inherit; font-size: 100%; font-style: inherit; font-weight: inherit; margin: 0; outline: 0; padding: 0; vertical-align: baseline; }
+
+html { font-size: 82%; /* Corrects text resizing oddly in IE6/7 when body font-size is set using em units http://clagnut.com/blog/348/#c790 */ overflow-y: scroll; /* Keeps page centred in all browsers regardless of content height */ -webkit-text-size-adjust: 100%; /* Prevents iOS text size adjust after orientation change, without disabling user zoom */ -ms-text-size-adjust: 100%; /* www.456bereastreet.com/archive/201012/controlling_text_size_in_safari_for_ios_without_disabling_user_zoom/ */ }
+
+body { background: #fff; }
+
+article, aside, details, figcaption, figure, footer, header, hgroup, nav, section { display: block; }
+
+#header ol, #header ul, #colophon ol, #colophon ul { list-style: none; }
+
+table { /* tables still need 'cellspacing="0"' in the markup */ border-collapse: separate; border-spacing: 0; }
+
+caption, th, td { font-weight: normal; text-align: left; }
+
+blockquote:before, blockquote:after, q:before, q:after { content: ""; }
+
+blockquote, q { quotes: "" ""; }
+
+a:focus { outline: thin dotted; }
+
+a:hover, a:active { /* Improves readability when focused and also mouse hovered in all browsers people.opera.com/patrickl/experiments/keyboard/test */ outline: 0; }
+
+a img { border: 0; }
+
+/* =Variables
+----------------------------------------------- */
+/* =Global
+----------------------------------------------- */
+body, button, input, select, textarea { color: #404040; font-size: 100%; line-height: 1.5; }
+
+/* Headings */
+h1 { font-size: 277%; line-height: 1.1; }
+h1 a { text-decoration: none; }
+
+h2 { font-size: 167%; line-height: 1.2; margin-bottom: .2em; }
+
+hr { background-color: #ccc; border: 0; height: 1px; margin-bottom: 1.5em; }
+
+/* Links */
+a, a:active, a:visited { color: #ff850b; text-decoration: none; -webkit-tap-highlight-color: #0e2b5b; /*quick color flip of webkit when clicked*/ }
+
+a:hover, a:focus { color: #b70046; text-decoration: underline; }
+
+.entry-title a, .entry-title a:active, .entry-title a:visited { color: #404040; -webkit-tap-highlight-color: #ff850b; /*quick color flip of webkit when clicked*/ text-decoration: none; }
+.entry-title a:hover, .entry-title a:focus { color: #b70046; }
+
+/* Text elements */
+p { margin-bottom: .8em; }
+
+ul, ol { margin: 0 0 1em 0; padding-left: 2.4em; }
+
+ul ul, ol ol, ul ol, ol ul { margin: .6em 0; }
+
+li { margin-bottom: .4em; }
+
+dt { font-weight: bold; }
+
+dd { margin: 0 1.5em 1.5em; }
+
+blockquote { margin: 0 1.5em; }
+
+address { margin: 0 0 1.5em; }
+
+pre { background: #eee; font-family: "Courier 10 Pitch", Courier, monospace; font-size: 116%; line-height: 1.6; margin-bottom: 1.6em; padding: 1.6em; overflow: auto; max-width: 100%; }
+
+code, kbd, tt, var { font: 116% Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace; }
+
+abbr, acronym { border-bottom: 1px dotted #666; cursor: help; }
+
+mark, ins { background: #fff9c0; text-decoration: none; }
+
+sup, sub { font-size: 75%; height: 0; line-height: 0; position: relative; vertical-align: baseline; }
+
+sup { bottom: 1ex; }
+
+sub { top: .5ex; }
+
+small { font-size: 75%; }
+
+big { font-size: 125%; }
+
+figure { margin: 0; }
+
+table { margin: 0 0 1.5em; width: 100%; }
+
+th { font-weight: bold; }
+
+button, input, select, textarea { font-size: 100%; /* Corrects font size not being inherited in all browsers */ margin: 0; /* Addresses margins set differently in IE6/7, F3/4, S5, Chrome */ vertical-align: baseline; /* Improves appearance and consistency in all browsers */ *vertical-align: middle; /* Improves appearance and consistency in all browsers */ }
+
+button, input { line-height: normal; /* Addresses FF3/4 setting line-height using !important in the UA stylesheet */ *overflow: visible; /* Corrects inner spacing displayed oddly in IE6/7 */ }
+
+button, html input[type="button"], input[type="reset"], input[type="submit"] { border: 1px solid #ccc; border-color: #ccc #ccc #bbb #ccc; border-radius: 3px; background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(60%, #fafafa), color-stop(100%, #e6e6e6)); background: -webkit-linear-gradient(#fafafa 60%, #e6e6e6 100%); background: -moz-linear-gradient(#fafafa 60%, #e6e6e6 100%); background: -o-linear-gradient(#fafafa 60%, #e6e6e6 100%); background: linear-gradient(#fafafa 60%, #e6e6e6 100%); box-shadow: inset 0 2px 1px #fff; color: #000; color: rgba(0, 0, 0, 0.8); cursor: pointer; /* Improves usability and consistency of cursor style between image-type 'input' and others */ -webkit-appearance: button; /* Corrects inability to style clickable 'input' types in iOS */ font-size: 93%; padding: 3% 4%; text-shadow: 0 1px 0 #000; text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5); }
+
+button:hover, html input[type="button"]:hover, input[type="reset"]:hover, input[type="submit"]:hover { background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(60%, #f5f5f5), color-stop(100%, #dcdcdc)); background: -webkit-linear-gradient(#f5f5f5 60%, #dcdcdc 100%); background: -moz-linear-gradient(#f5f5f5 60%, #dcdcdc 100%); background: -o-linear-gradient(#f5f5f5 60%, #dcdcdc 100%); background: linear-gradient(#f5f5f5 60%, #dcdcdc 100%); border-color: #bbb #bbb #aaa #bbb; }
+
+button:focus, html input[type="button"]:focus, input[type="reset"]:focus, input[type="submit"]:focus, button:active, html input[type="button"]:active, input[type="reset"]:active, input[type="submit"]:active { border-color: #aaa #bbb #bbb #bbb; box-shadow: inset 0 2px 2px #000; box-shadow: inset 0 2px 2px rgba(0, 0, 0, 0.15); }
+
+input[type="checkbox"], input[type="radio"] { box-sizing: border-box; /* Addresses box sizing set to content-box in IE8/9 */ padding: 0; /* Addresses excess padding in IE8/9 */ }
+
+input[type="search"] { -webkit-appearance: textfield; /* Addresses appearance set to searchfield in S5, Chrome */ -moz-box-sizing: content-box; -webkit-box-sizing: content-box; /* Addresses box sizing set to border-box in S5, Chrome (include -moz to future-proof) */ box-sizing: content-box; }
+
+input[type="search"]::-webkit-search-decoration { /* Corrects inner padding displayed oddly in S5, Chrome on OSX */ -webkit-appearance: none; }
+
+button::-moz-focus-inner, input::-moz-focus-inner { /* Corrects inner padding and border displayed oddly in FF3/4 www.sitepen.com/blog/2008/05/14/the-devils-in-the-details-fixing-dojos-toolbar-buttons/ */ border: 0; padding: 0; }
+
+input[type=text], input[type=email], textarea { color: #666; border: 1px solid #ccc; border-radius: 5px; }
+
+input[type=text]:focus, input[type=email]:focus, textarea:focus { color: #111; }
+
+::-webkit-input-placeholder { color: #787878; }
+
+:-moz-placeholder { color: #787878; }
+
+input[type=text], input[type=email] { padding: 3px; }
+
+textarea { overflow: auto; /* Removes default vertical scrollbar in IE6/7/8/9 */ padding-left: 3px; vertical-align: top; /* Improves readability and alignment in all browsers */ width: 98%; }
+
+/* Alignment */
+.alignleft { display: inline; float: left; margin: 0 1.5em 1.5em 0; }
+
+.alignright { display: inline; float: right; margin: 0 0 1.5em 1.5em; }
+
+.aligncenter { clear: both; display: block; margin: 0 auto 1.5em; }
+
+/* Text meant only for screen readers */
+.assistive-text { clip: rect(1px 1px 1px 1px); /* IE6, IE7 */ clip: rect(1px, 1px, 1px, 1px); position: absolute !important; }
+
+.more { font-size: 123.1%; display: inline-block; cursor: pointer; }
+.entry-summary .more { font-size: 100%; }
+.more .icon-more { vertical-align: middle; font-size: 93%; display: inline-block; }
+
+.clipimage { max-height: 20em; overflow: hidden; }
+
+.inner { max-width: 84em; margin: 0 auto; padding: 3% 4%; overflow: hidden; }
+
+body, button, input, select, textarea { font-family: "prenton",sans-serif; font-weight: 400; }
+
+#masthead h1, #colophon h1 { font-family: "bello-pro",sans-serif; }
+
+strong, b, .more { font-weight: 700; }
+
+dfn, cite, em, i { font-style: italic; }
+
+.entry-summary .more { font-weight: 400; }
+
+#masthead h4 { font-weight: 300; }
+
+#masthead h1 .hello, .section-title, .page.hentry .entry-title, .widget-title, .page-title { font-family: "prenton-display",sans-serif; font-weight: 100; }
+
+.entry-title, h2 { font-family: "prenton-condensed",sans-serif; font-weight: 400; letter-spacing: .02em; }
+
+/* =Header
+----------------------------------------------- */
+#masthead { background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(75%, #ff850b), color-stop(100%, #fb7d00)); background: -webkit-linear-gradient(#ff850b 75%, #fb7d00); background: -moz-linear-gradient(#ff850b 75%, #fb7d00); background: -o-linear-gradient(#ff850b 75%, #fb7d00); background: linear-gradient(#ff850b 75%, #fb7d00); }
+#masthead .hgroup { padding-right: 26%; }
+#masthead h1 { margin-bottom: -2%; color: #ffce9d; }
+#masthead h1 .hello { font-size: 69%; display: none; }
+#masthead h1 a { text-decoration: none; color: white; }
+#masthead h4 { font-size: 116%; display: none; color: #ffce9d; }
+
+/* =Menu
+----------------------------------------------- */
+.main-navigation { background: #ffb56c; border-top: 1px solid #ffb56c; }
+.main-navigation .inner { padding: 0; }
+.main-navigation .menu-main-nav-container { display: inline-block; width: 100%; }
+.main-navigation ul { list-style: none; margin: 0 0 -1px; clear: both; overflow: hidden; padding: 2% 4%; }
+.main-navigation li { display: inline-block; margin: 0 0 0 4%; padding: 1% 0; }
+.main-navigation li:first-child { margin: 0; }
+.main-navigation a { display: block; text-decoration: none; color: #fff; padding: 0 .1em; font-size: 138.5%; text-shadow: 0 0 5px #ff850b; }
+.main-navigation a:hover, .main-navigation a:focus { color: #0e2b5b; text-shadow: inherit; }
+.main-navigation .top { float: right; padding: 1.5% 3%; }
+.main-navigation .top a { font-size: 131%; }
+.main-navigation .top a:before { font-size: 85%; }
+
+.toolbar { position: absolute; right: 3.2%; top: 1%; display: block; width: 27%; }
+.toolbar .icon { float: right; margin-left: .4em; }
+.toolbar .icon a { font-size: 150%; padding: .2em .4em .1em; line-height: 1.4; display: block; text-decoration: none; position: relative; color: white; border: 1px solid white; border-radius: 5px; }
+.toolbar .icon a.icon-list { padding-left: .3em; }
+.toolbar .icon a:hover, .toolbar .icon a:focus { color: #b70046; border: 1px solid #b70046; }
+.toolbar .icon .assistive-text { width: 1.8em; height: 1.8em; top: 0; left: 0; overflow: hidden; }
+
+#search #searchform { background: #fff; background: rgba(255, 255, 255, 0.6); position: relative; overflow: hidden; }
+#search #searchform input[type="text"] { background: none; border: 0 none; padding: 3% 5%; color: #404040; width: 76%; float: left; border-radius: inherit; }
+#search #searchform input[type="text"]:focus { border: 1px solid #ff850b; color: #000; }
+#search #searchform ::-webkit-input-placeholder { color: #404040; }
+#search #searchform :-moz-placeholder { color: #404040; }
+#search #searchform #searchsubmit, #search #searchform .icon-arrow-right { padding: 0 2%; font-size: 146.5%; line-height: 1.8; width: 9%; height: 100%; text-align: center; position: absolute; right: 0; display: inline-block; }
+#search #searchform #searchsubmit { text-indent: -999em; z-index: 1; background: none; border: 0 none; box-shadow: inherit; text-shadow: inherit; width: 13%; }
+#search #searchform .icon-arrow-right { border-left: 1px solid #ffb56c; color: #ff850b; }
+#search #searchform:hover .icon-search, #search #searchform:focus .icon-search { color: #ff850b; }
+
+/* =Content
+----------------------------------------------- */
+.hentry { margin: 0 0 4%; clear: both; }
+
+.entry-meta { clear: both; }
+
+.byline { display: none; }
+
+.single .byline, .group-blog .byline { display: inline; }
+
+.page-links { clear: both; margin: 0 0 1.5em; }
+
+/* =Asides
+----------------------------------------------- */
+.blog .format-aside .entry-title, .archive .format-aside .entry-title { display: none; }
+
+/* =Media
+----------------------------------------------- */
+.site-header img, .entry-content img, .comment-content img, .widget img { max-width: 100%; /* Fluid images for posts, comments, and widgets */ }
+
+.site-header img, .entry-content img, img[class*="align"], img[class*="wp-image-"] { height: auto; /* Make sure images with WordPress-added height and width attributes are scaled correctly */ }
+
+.site-header img, .entry-content img, img.size-full { max-width: 100%; width: auto; /* Prevent stretching of full-size images with height and width attributes in IE8 */ }
+
+.entry-content img.wp-smiley, .comment-content img.wp-smiley { border: none; margin-bottom: 0; margin-top: 0; padding: 0; }
+
+.wp-caption { border: 1px solid #ccc; max-width: 100%; }
+
+.wp-caption.aligncenter, .wp-caption.alignleft, .wp-caption.alignright { margin-bottom: 1.5em; }
+
+.wp-caption img { display: block; margin: 1.2% auto 0; max-width: 98%; }
+
+.wp-caption-text { text-align: center; }
+
+.wp-caption .wp-caption-text { margin: 0.8075em 0; }
+
+#content .gallery { margin-bottom: 1.5em; }
+
+#content .gallery a img { border: none; height: auto; max-width: 90%; }
+
+#content .gallery dd { margin: 0; }
+
+/* Make sure embeds and iframes fit their containers */
+embed, iframe, object { max-width: 100%; }
+
+/* =Navigation
+----------------------------------------------- */
+#content .site-navigation { margin: 0 0 1.5em; overflow: hidden; clear: both; }
+
+#content .nav-previous { float: left; width: 50%; }
+
+#content .nav-next { float: right; text-align: right; width: 50%; }
+
+/* =Comments
+----------------------------------------------- */
+/* =Widgets
+----------------------------------------------- */
+.widget { margin: .4% 0 10%; }
+.widget .widget-title { margin-bottom: 3%; }
+
+/* =Content
+----------------------------------------------- */
+.section-title, .page.hentry .entry-title, .widget-title, .page-title { font-size: 138.5%; text-transform: uppercase; color: #ff850b; }
+
+.recent-portfolio ul, .recent-posts ul, .about ul, .widget ul { margin: 0 0 4%; padding: 0; list-style: none; }
+.recent-portfolio .hentry h2 a, .recent-posts .hentry h2 a, .about .hentry h2 a, .widget .hentry h2 a { padding: .3em 0 .2em; display: inline-block; }
+.recent-portfolio .hentry img, .recent-posts .hentry img, .about .hentry img, .widget .hentry img { max-width: 100%; height: auto; float: left; }
+
+.recent-portfolio .hentry, .recent-posts .hentry, .widget .hentry { border-top: 1px solid #ffb56c; margin: 4% 0 0; padding-top: 2%; }
+.recent-portfolio .hentry:first-child, .recent-posts .hentry:first-child, .widget .hentry:first-child { border: 0 none; margin-top: 0; padding: 0; }
+
+.recent-portfolio .hentry > a, .recent-posts .hentry > a { display: inline-block; max-width: 99%; border: 1px solid #ffb56c; }
+
+.blog .hentry > .entry-content, .blog .hentry > .entry-meta, .archive .hentry > .entry-content, .archive .hentry > .entry-meta, .single .hentry > .entry-content, .single .hentry > .entry-meta { border-top: 1px solid #ffb56c; padding-top: 1%; margin-top: 1%; }
+
+/* =Connect
+----------------------------------------------- */
+#page .social-media, #page .contact { padding: 0; margin-bottom: .4em; list-style: none; }
+#page .social-media { overflow: hidden; padding: .1em; }
+#page .social-media li { float: left; margin-left: .6em; }
+#page .social-media li:first-child { margin-left: 0; }
+#page .social-media a { font-size: 317%; line-height: 1; position: relative; }
+#page .social-media .assistive-text { width: 1em; height: 1.1em; top: 0; left: 0; overflow: hidden; }
+#page .contact { font-size: 138.5%; line-height: 1.8; clear: both; font-weight: 600; overflow: visible; }
+#page .contact li { margin-left: 0; float: none; }
+#page .contact a { padding: 0 .5em; margin-left: -.4em; display: inline-block; }
+#page .contact a:hover, #page .contact a:focus { background: #ffb56c; border-radius: 3px; text-decoration: none; }
+#page .contact a:before { margin-right: .3em; vertical-align: middle; }
+#page .contact a.icon-file:before { font-size: 85%; vertical-align: baseline; }
+#page .contact a.icon-file .icon-more { vertical-align: middle; font-size: 93%; display: inline-block; }
+
+.gallery-size-medium dl + br + dl, .gallery-size-medium dl + br + dl + dl, .gallery-size-medium dl + br + dl + dl + dl, .gallery-size-medium dl + br + dl + dl + dl + br { display: none; }
+
+#secondary .widget_categories .cat-item-3, #secondary .widget_categories .cat-item-12 { display: none; }
+
+/* =Tablet Style
+----------------------------------------------- */
+@media screen and (min-width: 510px) { #masthead .inner { padding: 1.5% 4%; }
+  #masthead .hgroup { padding-right: 36%; }
+  .home #masthead .hgroup { padding: 0; }
+  .home #masthead h1 { line-height: .9; width: 42%; padding: 0 4% 0 0; margin: 0; float: left; }
+  .home #masthead h1 .hello { display: inline; }
+  .home #masthead h1 .last { display: none; }
+  .home #masthead h4 { display: inline-block; width: 52%; float: left; }
+  .main-navigation { position: fixed; bottom: 0; width: 100%; text-align: left; }
+  .main-navigation .inner { padding: 1% 4%; }
+  .main-navigation .top { display: none; }
+  .main-navigation .toolbar { display: none; }
+  .main-navigation #search { float: right; width: 38%; margin: 0 0 0 2%; }
+  .main-navigation .menu-main-nav-container { float: left; width: 60%; }
+  .main-navigation .menu-main-nav-container ul { padding: 0; border: 0 none; }
+  #main { padding-bottom: 8%; }
+  .home #main { padding-bottom: 10%; }
+  #main .inner #primary { float: left; width: 66%; }
+  #main .inner #secondary { float: right; width: 30%; }
+  .recent-portfolio ul, .recent-posts ul, .about ul { overflow: hidden; margin: 0; }
+  .recent-portfolio img, .recent-posts img, .about img { float: left; }
+  .recent-portfolio .hentry, .recent-posts .hentry { float: left; clear: none; width: 48%; margin: 0 0 4% 4%; padding: 0; border: 0 none; }
+  .recent-portfolio .hentry.odd, .recent-posts .hentry.odd { margin-left: 0; clear: both; }
+  .recent-portfolio .hentry > a, .recent-posts .hentry > a { max-height: 20em; overflow: hidden; }
+  .recent-portfolio .hentry > a:hover, .recent-portfolio .hentry > a:focus, .recent-posts .hentry > a:hover, .recent-posts .hentry > a:focus { border-width: 8px; box-sizing: border-box; width: 300px; }
+  .gallery-size-medium { margin-bottom: 1em; }
+  .gallery-size-medium dl dt { max-height: 240px; overflow: hidden; } }
+@media screen and (min-width: 800px) { .home #masthead .hgroup { padding: 4%; border: 1px solid #ffb56c; overflow: hidden; }
+  .recent-portfolio .section-title, .recent-posts .section-title { margin: 0 0 -.2em 4%; color: #ffb56c; }
+  .recent-portfolio > div, .recent-posts > div { padding: 4%; background: #fff2e6; border: 1px solid #ffb56c; }
+  .home .recent-portfolio .hentry, .home .recent-posts .hentry { width: 30.66%; }
+  .home .recent-portfolio .hentry.odd, .home .recent-posts .hentry.odd { margin-left: 4%; clear: none; }
+  .home .recent-portfolio .hentry:first-child, .home .recent-portfolio .hentry.fourth, .home .recent-posts .hentry:first-child, .home .recent-posts .hentry.fourth { margin-left: 0; clear: both; }
+  .about .section-title, .about > .entry-header > .entry-title, .about .widget-title, .about .page-title, .page.hentry .section-title, .page.hentry > .entry-header > .entry-title, .page.hentry .widget-title, .page.hentry .page-title, .blog #primary .section-title, .blog #primary > .entry-header > .entry-title, .blog #primary .widget-title, .blog #primary .page-title, .archive #primary .section-title, .archive #primary > .entry-header > .entry-title, .archive #primary .widget-title, .archive #primary .page-title, .widget .section-title, .widget > .entry-header > .entry-title, .widget .widget-title, .widget .page-title { margin: 0 0 -.2em 4%; color: #ffb56c; }
+  .about > div, .about > ul, .page.hentry > div, .page.hentry > ul, .blog #primary > div, .blog #primary > ul, .archive #primary > div, .archive #primary > ul, .widget > div, .widget > ul { padding: 4%; background: #fff2e6; border: 1px solid #ffb56c; overflow: hidden; }
+  .widget { margin-top: 5.3%; }
+  .widget ul { list-style: none; }
+  .widget ul li { margin-top: 3%; }
+  .widget ul a { color: #404040; }
+  .widget ul a:hover, .widget ul a:focus { color: #b70046; }
+  .widget p { margin: 0; }
+  .about > div > div { width: 30.66%; float: left; margin-left: 4%; }
+  .about > div > div:first-child { margin-left: 0; width: 65.32%; } }
+/* Print style sheet for joeleen.net */
+@media print { #menu, .more, .social-media, .site-navigation, .post-navigation, #secondary, .entry-meta { display: none; }
+  .site-title { font-size: 48px; }
+  .section-title, .page.hentry .entry-title, .widget-title, .page-title { font-size: 36px !important; }
+  .blog .entry-title { font-size: 30px; }
+  .recent-portfolio ul, .recent-posts ul { overflow: hidden; margin: 0; }
+  .recent-portfolio .hentry, .recent-posts .hentry { max-width: 30%; float: left; clear: none; border: 0 none; padding: 0; margin: 0 20px 0 0; height: 340px; page-break-inside: avoid; }
+  .recent-portfolio .hentry > a, .recent-posts .hentry > a { max-height: 260px; overflow: hidden; }
+  .section.about h2 { margin-top: 20px; }
+  .contact { font-size: 16px !important; }
+  .contact li { margin: 0; }
+  .entry-content h2 { page-break-after: avoid; } }

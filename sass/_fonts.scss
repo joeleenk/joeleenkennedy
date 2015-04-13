@@ -1,0 +1,28 @@
+body, button, input, select, textarea {
+	font-family: "prenton",sans-serif;
+	font-weight:400;
+}
+#masthead h1, #colophon h1 {
+	font-family: "bello-pro",sans-serif;
+}
+strong, b, .more {
+	font-weight:700;
+}
+dfn, cite, em, i {
+	font-style: italic;
+}
+.entry-summary .more {
+	font-weight:400;
+}
+#masthead h4 {
+	font-weight:300;
+}
+#masthead h1 .hello, .section-title, .page.hentry .entry-title, .widget-title, .page-title {
+	font-family:"prenton-display",sans-serif;
+	font-weight:100;
+}
+.entry-title, h2 {
+	font-family:"prenton-condensed",sans-serif;
+	font-weight:400;
+	letter-spacing:.02em;
+}
